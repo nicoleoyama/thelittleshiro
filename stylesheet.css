@@ -1,0 +1,139 @@
+ @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+ 
+* {
+  box-sizing: border-box;
+}
+
+/* main layout */
+body {
+	background-color: #e5e9ec;
+	font-family: 'Nunito', sans-serif;
+  font-size: calc(15px + 0.390625vw);
+	margin: 0 1em;
+	overflow-wrap: break-word;
+	color: #3e3f41;
+	
+}
+
+.caption-style {
+	padding: 5px;
+	margin: 10px;
+}
+ 
+.wrapper { 
+  width: min(100% - 30px, 1000px);
+  margin-inline: auto;
+}
+
+/*styling for big text*/
+.biggy-text { 
+ font-size: calc(1em + 2.5vw);
+	font-weight: 600;     
+	overflow-wrap: break-word;
+}
+
+/*for some reason the a link on the header was display block and i couldn't figure it out. i fixed it to display:inline here and it's within the header text like how i want it.*/
+.biggy-text a {
+display:inline;
+}
+
+nav {
+	margin-top: 60px;
+}
+
+article.post { 
+	background-color: #222133;
+	display:block;
+	padding:30px;
+	margin: 30px;
+	color: #e5e9ec;
+	border-radius: 0;
+  box-shadow: 10px 10px 0 3px rgba(0,0,0,.2);
+  padding: clamp(1rem,5%,2rem);
+}
+
+ 
+img /*responsive images*/{ 
+  max-width: 100%;
+  height: auto;
+} 
+ 
+/* lists and nav #primary-menu so only the menu is inline and other lists are not*/
+
+#primary-menu ul  {
+	display: inline;
+}
+
+#primary-menu li {
+	list-style-type: none;	
+	margin-left:20px;
+	padding: 0;
+	float: left;
+}
+
+/* when you select something and the background color that pops up*/
+::-moz-selection {
+	background:#fe6e6e;
+	color: #fff;
+}
+
+::selection {
+	background: #fe6e6e;
+	color: #fff;
+}
+
+ 
+.site-header { 
+	margin-bottom: 40px;
+} 
+/*columns*/
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+   padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* links */
+a {   font-weight: bold; }
+a:link { color: #4ca39a; }
+a:visited { color: #aaa5cb;}
+a:hover { color: #3e3f41;}
+ 
